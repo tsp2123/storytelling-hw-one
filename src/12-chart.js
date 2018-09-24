@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-(function () {
+;(function() {
   // Build your SVG here
   // using all of that cut-and-paste magic
   var margin = { top: 100, right: 60, bottom: 20, left: 20 }
@@ -33,11 +33,11 @@ import * as d3 from 'd3'
 
   d3.csv(require('./eating-data.csv'))
     .then(ready)
-    .catch(function (err) {
+    .catch(function(err) {
       console.log('Failed with', err)
     })
 
-  function ready (datapoints) {
+  function ready(datapoints) {
     // Add and style your marks here
     console.log('Data is', datapoints)
 

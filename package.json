@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
+    "lint": "eslint --fix src/*.js",
     "build": "parcel build src/index.html --out-dir docs --public-url /storytelling-hw-one"
   },
   "author": "",

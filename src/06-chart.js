@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-(function () {
+;(function() {
   var widthScale = d3
     .scaleLinear()
     .domain([0, 200])
@@ -12,6 +12,5 @@ import * as d3 from 'd3'
   var svg = d3.select('#chart6')
   var rect = svg.select('rect')
 
-  rect.attr('fill', colorScale('woman'))
-    .attr('width', widthScale(165))
+  rect.attr('fill', colorScale('woman')).attr('width', widthScale(165))
 })()

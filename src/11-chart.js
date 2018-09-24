@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-(function () {
+;(function() {
   // Build your SVG here
   var margin = { top: 50, right: 50, bottom: 5, left: 50 }
 
@@ -30,11 +30,11 @@ import * as d3 from 'd3'
 
   d3.csv(require('./eating-data.csv'))
     .then(ready)
-    .catch(function (err) {
+    .catch(function(err) {
       console.log('Failed with', err)
     })
 
-  function ready (datapoints) {
+  function ready(datapoints) {
     // Add and style your marks here
     svg
       .selectAll('circle')
@@ -42,10 +42,10 @@ import * as d3 from 'd3'
       .enter()
       .append('circle')
       .attr('r', 6)
-      .attr('cy', function (d) {
+      .attr('cy', function(d) {
         return pointScale(d.animal)
       })
-      .attr('cx', function (d) {
+      .attr('cx', function(d) {
         return xPositionScale(d.hamburgers)
       })
       .attr('fill', 'lightpink')

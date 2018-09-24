@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-(function () {
+;(function() {
   var margin = { top: 50, right: 50, bottom: 5, left: 50 }
 
   var width = 400
@@ -28,11 +28,11 @@ import * as d3 from 'd3'
 
   d3.csv(require('./eating-data.csv'))
     .then(ready)
-    .catch(function (err) {
+    .catch(function(err) {
       console.log('Failed with', err)
     })
 
-  function ready (datapoints) {
+  function ready(datapoints) {
     // Add and style your marks here
     console.log('Data is', datapoints)
 
@@ -43,10 +43,10 @@ import * as d3 from 'd3'
       .append('circle')
       .attr('r', 6)
       .attr('fill', colorScale)
-      .attr('cx', function (d) {
+      .attr('cx', function(d) {
         return xPositionScale(d.hamburgers)
       })
-      .attr('cy', function (d) {
+      .attr('cy', function(d) {
         return yPositionScale(d.hotdogs)
       })
   }

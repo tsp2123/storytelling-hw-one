@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-(function () {
+;(function() {
   var margin = {
     top: 50,
     right: 50,
@@ -20,7 +20,8 @@ import * as d3 from 'd3'
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
 
   // DO NOT CHANGE THIS SECTION
-  svg.append('rect')
+  svg
+    .append('rect')
     .attr('height', 100)
     .attr('width', 300)
     .attr('x', 0)

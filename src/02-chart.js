@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-(function () {
+;(function() {
   // Here is your data
   var countries = [
     {
@@ -45,10 +45,10 @@ import * as d3 from 'd3'
     .selectAll('rect')
     .data(countries)
     .attr('height', 50)
-    .attr('width', function (d) {
+    .attr('width', function(d) {
       return widthScale(d.gdp)
     })
-    .attr('fill', function (d) {
+    .attr('fill', function(d) {
       return colorScale(d.continent)
     })
 })()

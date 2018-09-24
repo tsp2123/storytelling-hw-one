@@ -1,10 +1,9 @@
 import * as d3 from 'd3'
-
-(function () {
+;(function() {
   // DO NOT EDIT ANYTHING IN THIS FILE
   d3.csv(require('./fake-data.csv'))
     .then(ready)
-    .catch(function (err) {
+    .catch(function(err) {
       console.log('Failed with', err)
     })
 

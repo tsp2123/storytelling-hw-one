@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-(function () {
+;(function() {
   // Build your SVG here
   // using all of that cut-and-paste magic
   var margin = { top: 30, right: 30, bottom: 60, left: 80 }
@@ -23,18 +23,16 @@ import * as d3 from 'd3'
 
   var xPositionScale = d3.scaleBand().range([height, 0])
 
-  var colorScale = d3
-    .scaleOrdinal()
-    .range(['#fc9272', '#de2d26', 'pink'])
+  var colorScale = d3.scaleOrdinal().range(['#fc9272', '#de2d26', 'pink'])
 
   d3.csv(require('./eating-data.csv'))
     .then(ready)
     .catch(function(err) {
-      console.log("Failed with", err)
+      console.log('Failed with', err)
     })
 
-  function ready (datapoints) {
-    var names = datapoints.map(function (d) {
+  function ready(datapoints) {
+    var names = datapoints.map(function(d) {
       return d.name
     })
 
